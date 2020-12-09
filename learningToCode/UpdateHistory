@@ -1,0 +1,39 @@
+1.0:
+	factions framework and importing old resources
+2.0:
+	factions commands (create/info), faction manager, improve factions framework
+3.0:
+	chunks and claims, improved factions framework, improved faction manager
+3.4: 
+	overhauled command factories, instantiation, and registration, added basic balances and manager
+4.0: 
+	added support for troop patrol factions, faction home, basic command permissions, faction owner permissions
+4.1:
+	fixed block breaking algorithm bug, bat patrol not joining bug, added spawn chunks
+4.2:
+	final bug fixes and prep for server, added silk touch spawners
+
+	
+	
+	
+	
+	
+	public CommandExecutor getFactoryCommand(String className, String type) {
+		CommandExecutor command = null;
+		try {
+			if(type.equalsIgnoreCase("faction")) {
+					command = factionCommandFactory.createCommand(className);
+					System.out.println("CASE STATEMENT " + command);
+			} else if(type.equalsIgnoreCase("command")) {
+					command = commandFactory.createJdweakCommand(className);
+			}
+		} catch (InstantiationException e) {
+			System.out.println(e.toString());
+		} catch (IllegalAccessException e) {
+			System.out.println(e.toString());
+		} catch (ClassNotFoundException e) {
+			System.out.println(e.toString());
+		}
+		System.out.println("Inside getFactoryCommand method, returning " + command);
+		return command;
+	}

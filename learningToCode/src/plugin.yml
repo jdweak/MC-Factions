@@ -1,0 +1,21 @@
+name: learning_to_code
+author: jdweak
+version: 4.1
+main: me.jdweak.learning.Main
+commands:
+ customEnchant:
+ give_custom_item_prototype:
+ location:
+ chunkClaimInfo:
+ claim:
+ factionInfo:
+ leaveFaction:
+ unclaim:
+ setHome:
+ home:
+ giveFactionBook:
+ setFactionHome:
+ fHome:
+ setFactionOwner:
+ setSpawnChunk:
+ removeSpawnChunk:
