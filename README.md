@@ -33,7 +33,7 @@ setSpawnChunk: sets the current chunk as an area where all non admins cannot int
 
 removeSpawnChunk: removes current chunk from the spawn chunks list
 
-customEnchant: allows the enchanting of items ignoring vanilla level caps and item compatibility
+customEnchant: allows the enchanting of items ignoring vanilla level caps and item compatibility (Syntax is command, enchantment, level)
 
 give_custom_item_prototype: gives the player a teleport staff
 
